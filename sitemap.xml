@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/08/16/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A82021%E5%90%8E%E7%AB%AF%E7%AC%94%E8%AF%95%E7%AC%AC%E4%BA%8C%E5%9C%BA08.16/</loc>
+    
+    <lastmod>2020-08-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/</loc>
     
     <lastmod>2020-08-15</lastmod>
@@ -116,7 +123,7 @@
 
   <url>
     <loc>http://yoursite.com/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -124,56 +131,70 @@
   
   <url>
     <loc>http://yoursite.com/tags/%E7%AC%94%E8%AF%95/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/java/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/%E5%B9%B6%E5%8F%91/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/volatile/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/synchronized/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/Linux/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/Ubuntu/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/%E5%AD%97%E8%8A%82/</loc>
+    <lastmod>2020-08-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/%E8%83%8C%E5%8C%85/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -182,49 +203,49 @@
   
   <url>
     <loc>http://yoursite.com/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/java/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/Java/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/mysql/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/redis/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/Linux/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2020-08-15</lastmod>
+    <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
