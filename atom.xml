@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-15T13:34:05.364Z</updated>
+  <updated>2020-09-21T03:13:08.508Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>快速幂算法</title>
+    <link href="http://yoursite.com/2020/09/21/%E5%BF%AB%E9%80%9F%E5%B9%82%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2020/09/21/%E5%BF%AB%E9%80%9F%E5%B9%82%E7%AE%97%E6%B3%95/</id>
+    <published>2020-09-20T16:00:00.000Z</published>
+    <updated>2020-09-21T03:13:08.508Z</updated>
+    
+    <content type="html"><![CDATA[<p>字节跳动的笔试中遇到了求快速幂的题，现整理一下：</p><h4 id="快速幂公式"><a href="#快速幂公式" class="headerlink" title="快速幂公式"></a>快速幂公式</h4><p>​                                                                                    a<sup>n</sup> = (a<sup>n/2</sup>)<sup>2</sup> * a<sup>(n%2)</sup></p><h4 id="求快速幂"><a href="#求快速幂" class="headerlink" title="求快速幂"></a><a href="https://leetcode-cn.com/problems/powx-n/">求快速幂</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public double myPow(double x, long n) &#123;</span><br><span class="line">        if(x &#x3D;&#x3D; 0)&#123;</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line">        if(n &#x3D;&#x3D; 0)&#123;</span><br><span class="line">            return 1;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        boolean flag &#x3D; n &lt; 0 ? true : false;</span><br><span class="line">        n &#x3D; Math.abs(n);   &#x2F;&#x2F; int会出现溢出错误</span><br><span class="line"></span><br><span class="line">        double res &#x3D; fastpow(x, n);</span><br><span class="line"></span><br><span class="line">        if(flag)&#123;</span><br><span class="line">           return 1&#x2F;res;</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            return res;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public double fastpow(double x, long n)&#123;</span><br><span class="line">        if(n &#x3D;&#x3D; 1)&#123;</span><br><span class="line">            return x;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        double res &#x3D; fastpow(x, n&#x2F;2);</span><br><span class="line">        res &#x3D; res * res;</span><br><span class="line">        if(n % 2 &#x3D;&#x3D; 1)&#123;</span><br><span class="line">            res &#x3D; res * x;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;字节跳动的笔试中遇到了求快速幂的题，现整理一下：&lt;/p&gt;
+&lt;h4 id=&quot;快速幂公式&quot;&gt;&lt;a href=&quot;#快速幂公式&quot; class=&quot;headerlink&quot; title=&quot;快速幂公式&quot;&gt;&lt;/a&gt;快速幂公式&lt;/h4&gt;&lt;p&gt;​                         </summary>
+      
+    
+    
+    
+    <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>MVCC多版本并发控制</title>
@@ -271,6 +296,29 @@
   </entry>
   
   <entry>
+    <title>数据库基础概念</title>
+    <link href="http://yoursite.com/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
+    <id>http://yoursite.com/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/</id>
+    <published>2020-08-13T13:22:53.000Z</published>
+    <updated>2020-08-15T14:19:12.413Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="一、事务"><a href="#一、事务" class="headerlink" title="一、事务"></a>一、事务</h4><p>事务指的是满足ACID的一组操作，它可以通过Commit提交一个事务，也可以使用Rollback进行回滚。</p><ol><li><p><strong>原子性（Atomicity）</strong></p><p>事务被视为不可分割的最小单元，事务的所有操作要么全部完成后提交，要么全部失败回滚。</p><p>回滚可以通过回滚日志（Undo log）实现，里面记录着事务所执行的所有修改操作，回滚时反向执行即可。</p></li><li><p><strong>一致性（Consistency）</strong></p><p>数据库在事务执行前后都保持一致性状态。在一致性状态下，所有事务对同一个数据的读取结果是相同的。</p></li><li><p><strong>隔离性（Isolation）</strong></p><p>一个事务所作的更改在提交前对其他事务是不可见的。</p></li><li><p><strong>持久性（Durability）</strong></p><p>一旦事务提交，其所作的更改就会永远保持到数据库中。即使数据库发生崩溃，事务的执行的结果也不能丢失。</p><p>系统发生崩溃时，可以通过重做日志（Redo Log）进行修复，从而实现持久性。与回滚日志不同记录的数据的逻辑修改不同，重做日志记录的是数据页的物理更改。</p></li></ol><p>事务的ACID特性概念简单，但不好理解，主要是这几个特性不是一种平级关系：</p><ul><li>一致性是基本保证的，只有满足一致性，事务的执行结果才是正确的</li><li>在无并发情形下，事务串行执行，隔离性一定满足。此时只要满足原子性就能满足一致性</li><li>在并发情形下，多个事务并发执行，事务不仅要满足原子性，还要满足隔离性，才能满足一致性</li><li>事务满足持久性，是为了应对系统崩溃情况</li></ul><h4 id="二、并发一致性问题"><a href="#二、并发一致性问题" class="headerlink" title="二、并发一致性问题"></a>二、并发一致性问题</h4><p>并发条件下，事务的隔离性很难保证，因为会出现很多并发一致性问题。</p><ol><li><p><strong>丢失修改</strong></p><p>T1，T2两个事务都对一个数据进行修改，T1先修改，T2后修改，此时T2的修改会覆盖T1的修改。</p></li></ol><p><img src="/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/Users\Liuyz\Desktop\面试备战笔记\images\丢失修改.png" alt="丢失修改"></p><ol start="2"><li><p><strong>读脏数据</strong></p><p>T1修改一个数据，T2随后读取了该数据。如果T1撤销了这次修改（发生了回滚），那么T2读到的数据是脏数据。</p><p><img src="/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/Users\Liuyz\Desktop\面试备战笔记\images\读脏数据.png" alt="读脏数据"></p></li><li><p><strong>不可重复读</strong></p><p>T2读取了一个数据，随后T1修改了该数据。如果T2再次读该数据，此时读取的数据与第一次不一致。</p><p><img src="/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/Users\Liuyz\Desktop\面试备战笔记\images\不可重复读.png" alt="不可重复读"></p></li><li><p><strong>幻读</strong></p><p>T1读取了某个范围内的数据，随后T2在这个范围内插入了一条数据。T1再次查询这个范围内的数据的话，此时读取的结果与第一次不同。</p><p><img src="/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/Users\Liuyz\Desktop\面试备战笔记\images\幻读.png" alt="幻读"></p></li></ol><h4 id="三、数据库中的锁机制"><a href="#三、数据库中的锁机制" class="headerlink" title="三、数据库中的锁机制"></a>三、数据库中的锁机制</h4><ol><li><p><strong>锁的粒度</strong></p><p>MySQL中提供了两种锁的粒度：行级锁和表级锁。</p><p>降低锁的粒度，可以减少锁的竞争，提升系统的并发程度。</p><p>但是加锁需要消耗资源，锁的各种实现都会增加系统负担。锁粒度越小，系统开销越大。</p><p>因此需要平衡锁开销和并发度。</p></li><li><p><strong>锁的类型</strong></p><p>独占锁（Exclusive），简写为 X 锁，又称写锁。</p><p>共享锁（Shared），简写为 S 锁，又称读锁。</p><p>有以下两个规定：</p><p>​    一个事务对数据对象 A 加了 X 锁，就可以对 A 进行读取和更新。加锁期间其它事务不能对 A 加任何锁。</p><p>​    一个事务对数据对象 A 加了 S 锁，可以对 A 进行读取操作，但是不能进行更新操作。加锁期间其它事务能对 A 加 S 锁，但是不能加 X 锁。</p><p><strong>补充</strong>（不太懂）</p><p>使用意向锁（Intention Locks）可以更容易地支持多粒度封锁。</p><p>在存在行级锁和表级锁的情况下，事务 T 想要对表 A 加 X 锁，就需要先检测是否有其它事务对表 A 或者表 A 中的任意一行加了锁，那么就需要对表 A 的每一行都检测一次，这是非常耗时的。</p><p>意向锁在原来的 X/S 锁之上引入了 IX/IS，IX/IS 都是表锁，用来表示一个事务想要在表中的某个数据行上加 X 锁或 S 锁。有以下两个规定：</p><p>​    一个事务在获得某个数据行对象的 S 锁之前，必须先获得表的 IS 锁或者更强的锁；</p><p>​    一个事务在获得某个数据行对象的 X 锁之前，必须先获得表的 IX 锁。</p><p>通过引入意向锁，事务 T 想要对表 A 加 X 锁，只需要先检测是否有其它事务对表 A 加了 X/IX/S/IS 锁，如果加了就表示有其它事务正在使用这个表或者表中某一行的锁，因此事务 T 加 X 锁失败。</p></li><li><p><strong>封锁协议</strong></p><p><strong>一级封锁协议</strong>：事务 T 要修改数据 A 时必须加 X 锁，直到 T 结束才释放锁。</p><p>可以解决丢失修改问题，因为不能同时有两个事务对同一个数据进行修改，那么事务的修改就不会被覆盖。</p><p><strong>二级封锁协议</strong>：在一级的基础上，要求读取数据 A 时必须加 S 锁，读取完马上释放 S 锁。</p><p>可以解决读脏数据问题，因为如果一个事务在对数据 A 进行修改，根据 1 级封锁协议，会加 X 锁，那么就不能再加 S 锁了，也就是不会读入数据。</p><p><strong>三级封锁协议</strong>：在二级的基础上，要求读取数据 A 时必须加 S 锁，直到事务结束了才能释放 S 锁。</p><p>可以解决不可重复读的问题，因为读 A 时，其它事务不能对 A 加 X 锁，从而避免了在读的期间数据发生改变。</p><p><strong>两端锁协议</strong>：加锁和解锁分为两个阶段进行。</p><p>可串行化调度是指，通过并发控制，使得并发执行的事务结果与某个串行执行的事务结果相同。串行执行的事务互不干扰，不会出现并发一致性问题。</p><p>事务遵循两段锁协议是保证可串行化调度的充分条件，但不是必要条件。</p></li></ol><h4 id="四、事务的隔离级别"><a href="#四、事务的隔离级别" class="headerlink" title="四、事务的隔离级别"></a>四、事务的隔离级别</h4><ol><li><p><strong>读未提交（READ UNCOMMITTED）</strong></p><p>一个事务可以读取到另一个事务没有提交的数据。无法避免任何一种情况。</p></li><li><p><strong>读提交（READ COMMITTED）</strong></p><p>一个事务只能读取已经提交的事务所做的修改。换句话说，一个事务所做的修改在提交之前对其它事务是不可见的。可以解决脏读。</p></li><li><p><strong>可重复读（REPEATABLE READ）</strong></p><p>保证在同一个事务中多次读取同一数据的结果是一样的。可以解决不可重复读。</p></li><li><p><strong>序列化（SERIALIZABLE）</strong></p><p>强制事务串行执行，这样多个事务互不干扰，不会出现并发一致性问题。</p><p>该隔离级别需要加锁实现，因为要使用加锁机制保证同一时间只有一个事务执行，也就是保证事务串行执行。</p></li></ol><h4 id="五、多版本并发控制"><a href="#五、多版本并发控制" class="headerlink" title="五、多版本并发控制"></a>五、多版本并发控制</h4><h4 id="六、关系数据库设计理论"><a href="#六、关系数据库设计理论" class="headerlink" title="六、关系数据库设计理论"></a>六、关系数据库设计理论</h4><p><strong>数据库三大范式：</strong></p><ul><li><strong>属性不可分</strong>：每一列属性都是不可再分的属性值，确保每一列的原子性，两列属性相近或一样，尽量合并属性一样的列，确保不产生冗余数据。</li><li>每一行的数据只能与其中一列相关，一行数据只做一件事。只要数据列中出现数据重复，就要把表拆分开来。</li><li>数据不能存在传递关系，每个属性都与主键有直接关系而不是间接关系。</li></ul><h4 id="七、常见问题"><a href="#七、常见问题" class="headerlink" title="七、常见问题"></a>七、常见问题</h4><ol><li><p><strong>数据库索引用过哪些，什么情况失效？</strong></p><p>主键索引（聚簇索引）、普通索引、唯一索引、全文索引</p><p>where 语句中使用or，但是没有把or中的所有字段都加上索引，索引失效。</p></li></ol><p>　　where 语句使用&lt;&gt;和!=</p><p>　　like查询以“%…”开头</p><p>　　如果mysql估计全表扫描更快的话</p><ol start="2"><li><p><strong>LIMIT M, N</strong> </p><p>LIMIT 给定两个参数，第一个参数指定第一个返回记录行的偏移量，第二个参数指定返回记录行的最大数目（初始记录行的偏移量是 0而不是 1)。</p><p>LIMIT M 等价于LIMIT 0, M</p></li><li><p><strong>drop和delete的区别</strong></p><p>delete 删除的是 <strong>数据，</strong>drop语句删除表结构及所有数据，并将表所占用的空间全部释放</p></li></ol><p>　　delete会触发触发器，drop不会触发触发器；</p><ol start="4"><li><p><strong>数据库事务的应用场景</strong></p><p>在执行一系列数据库操作时，要保证这些操作必须完全正确执行，否则就不执行，在这种情况下，适合使用事务，例如将一些数据插入到两个相关联的表中，而且不能只有一张表插入成功，这种情况下，使用事务，无论是否插入成功，都不会对数据库造成不好的影响。</p></li><li><p><strong>数据库索引的创建原则</strong></p><p>表的主键、外键必须有索引;</p><p>经常查询的数据列最好建立索引</p><p>对于需要在指定范围内的快速或频繁查询的数据列;</p><p>经常用在WHERE子句中的数据列。</p><p>经常出现在关键字order by、group by、distinct后面的字段，建立索引。如果建立的是复合索引，索引的字段顺序要和这些关键字后面的字段顺序一致，否则索引不会被使用。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;一、事务&quot;&gt;&lt;a href=&quot;#一、事务&quot; class=&quot;headerlink&quot; title=&quot;一、事务&quot;&gt;&lt;/a&gt;一、事务&lt;/h4&gt;&lt;p&gt;事务指的是满足ACID的一组操作，它可以通过Commit提交一个事务，也可以使用Rollback进行回滚。&lt;/p&gt;
+&lt;ol&gt;</summary>
+      
+    
+    
+    
+    <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Redis缓存雪崩、穿透、击穿</title>
     <link href="http://yoursite.com/2020/08/13/Redis%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9%E3%80%81%E7%A9%BF%E9%80%8F%E3%80%81%E5%87%BB%E7%A9%BF/"/>
     <id>http://yoursite.com/2020/08/13/Redis%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9%E3%80%81%E7%A9%BF%E9%80%8F%E3%80%81%E5%87%BB%E7%A9%BF/</id>
@@ -310,29 +358,6 @@
     
     
     <category term="redis" scheme="http://yoursite.com/categories/redis/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据库基础概念</title>
-    <link href="http://yoursite.com/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
-    <id>http://yoursite.com/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/</id>
-    <published>2020-08-13T13:22:53.000Z</published>
-    <updated>2020-08-15T14:19:12.413Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="一、事务"><a href="#一、事务" class="headerlink" title="一、事务"></a>一、事务</h4><p>事务指的是满足ACID的一组操作，它可以通过Commit提交一个事务，也可以使用Rollback进行回滚。</p><ol><li><p><strong>原子性（Atomicity）</strong></p><p>事务被视为不可分割的最小单元，事务的所有操作要么全部完成后提交，要么全部失败回滚。</p><p>回滚可以通过回滚日志（Undo log）实现，里面记录着事务所执行的所有修改操作，回滚时反向执行即可。</p></li><li><p><strong>一致性（Consistency）</strong></p><p>数据库在事务执行前后都保持一致性状态。在一致性状态下，所有事务对同一个数据的读取结果是相同的。</p></li><li><p><strong>隔离性（Isolation）</strong></p><p>一个事务所作的更改在提交前对其他事务是不可见的。</p></li><li><p><strong>持久性（Durability）</strong></p><p>一旦事务提交，其所作的更改就会永远保持到数据库中。即使数据库发生崩溃，事务的执行的结果也不能丢失。</p><p>系统发生崩溃时，可以通过重做日志（Redo Log）进行修复，从而实现持久性。与回滚日志不同记录的数据的逻辑修改不同，重做日志记录的是数据页的物理更改。</p></li></ol><p>事务的ACID特性概念简单，但不好理解，主要是这几个特性不是一种平级关系：</p><ul><li>一致性是基本保证的，只有满足一致性，事务的执行结果才是正确的</li><li>在无并发情形下，事务串行执行，隔离性一定满足。此时只要满足原子性就能满足一致性</li><li>在并发情形下，多个事务并发执行，事务不仅要满足原子性，还要满足隔离性，才能满足一致性</li><li>事务满足持久性，是为了应对系统崩溃情况</li></ul><h4 id="二、并发一致性问题"><a href="#二、并发一致性问题" class="headerlink" title="二、并发一致性问题"></a>二、并发一致性问题</h4><p>并发条件下，事务的隔离性很难保证，因为会出现很多并发一致性问题。</p><ol><li><p><strong>丢失修改</strong></p><p>T1，T2两个事务都对一个数据进行修改，T1先修改，T2后修改，此时T2的修改会覆盖T1的修改。</p></li></ol><p><img src="/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/Users\Liuyz\Desktop\面试备战笔记\images\丢失修改.png" alt="丢失修改"></p><ol start="2"><li><p><strong>读脏数据</strong></p><p>T1修改一个数据，T2随后读取了该数据。如果T1撤销了这次修改（发生了回滚），那么T2读到的数据是脏数据。</p><p><img src="/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/Users\Liuyz\Desktop\面试备战笔记\images\读脏数据.png" alt="读脏数据"></p></li><li><p><strong>不可重复读</strong></p><p>T2读取了一个数据，随后T1修改了该数据。如果T2再次读该数据，此时读取的数据与第一次不一致。</p><p><img src="/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/Users\Liuyz\Desktop\面试备战笔记\images\不可重复读.png" alt="不可重复读"></p></li><li><p><strong>幻读</strong></p><p>T1读取了某个范围内的数据，随后T2在这个范围内插入了一条数据。T1再次查询这个范围内的数据的话，此时读取的结果与第一次不同。</p><p><img src="/2020/08/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/Users\Liuyz\Desktop\面试备战笔记\images\幻读.png" alt="幻读"></p></li></ol><h4 id="三、数据库中的锁机制"><a href="#三、数据库中的锁机制" class="headerlink" title="三、数据库中的锁机制"></a>三、数据库中的锁机制</h4><ol><li><p><strong>锁的粒度</strong></p><p>MySQL中提供了两种锁的粒度：行级锁和表级锁。</p><p>降低锁的粒度，可以减少锁的竞争，提升系统的并发程度。</p><p>但是加锁需要消耗资源，锁的各种实现都会增加系统负担。锁粒度越小，系统开销越大。</p><p>因此需要平衡锁开销和并发度。</p></li><li><p><strong>锁的类型</strong></p><p>独占锁（Exclusive），简写为 X 锁，又称写锁。</p><p>共享锁（Shared），简写为 S 锁，又称读锁。</p><p>有以下两个规定：</p><p>​    一个事务对数据对象 A 加了 X 锁，就可以对 A 进行读取和更新。加锁期间其它事务不能对 A 加任何锁。</p><p>​    一个事务对数据对象 A 加了 S 锁，可以对 A 进行读取操作，但是不能进行更新操作。加锁期间其它事务能对 A 加 S 锁，但是不能加 X 锁。</p><p><strong>补充</strong>（不太懂）</p><p>使用意向锁（Intention Locks）可以更容易地支持多粒度封锁。</p><p>在存在行级锁和表级锁的情况下，事务 T 想要对表 A 加 X 锁，就需要先检测是否有其它事务对表 A 或者表 A 中的任意一行加了锁，那么就需要对表 A 的每一行都检测一次，这是非常耗时的。</p><p>意向锁在原来的 X/S 锁之上引入了 IX/IS，IX/IS 都是表锁，用来表示一个事务想要在表中的某个数据行上加 X 锁或 S 锁。有以下两个规定：</p><p>​    一个事务在获得某个数据行对象的 S 锁之前，必须先获得表的 IS 锁或者更强的锁；</p><p>​    一个事务在获得某个数据行对象的 X 锁之前，必须先获得表的 IX 锁。</p><p>通过引入意向锁，事务 T 想要对表 A 加 X 锁，只需要先检测是否有其它事务对表 A 加了 X/IX/S/IS 锁，如果加了就表示有其它事务正在使用这个表或者表中某一行的锁，因此事务 T 加 X 锁失败。</p></li><li><p><strong>封锁协议</strong></p><p><strong>一级封锁协议</strong>：事务 T 要修改数据 A 时必须加 X 锁，直到 T 结束才释放锁。</p><p>可以解决丢失修改问题，因为不能同时有两个事务对同一个数据进行修改，那么事务的修改就不会被覆盖。</p><p><strong>二级封锁协议</strong>：在一级的基础上，要求读取数据 A 时必须加 S 锁，读取完马上释放 S 锁。</p><p>可以解决读脏数据问题，因为如果一个事务在对数据 A 进行修改，根据 1 级封锁协议，会加 X 锁，那么就不能再加 S 锁了，也就是不会读入数据。</p><p><strong>三级封锁协议</strong>：在二级的基础上，要求读取数据 A 时必须加 S 锁，直到事务结束了才能释放 S 锁。</p><p>可以解决不可重复读的问题，因为读 A 时，其它事务不能对 A 加 X 锁，从而避免了在读的期间数据发生改变。</p><p><strong>两端锁协议</strong>：加锁和解锁分为两个阶段进行。</p><p>可串行化调度是指，通过并发控制，使得并发执行的事务结果与某个串行执行的事务结果相同。串行执行的事务互不干扰，不会出现并发一致性问题。</p><p>事务遵循两段锁协议是保证可串行化调度的充分条件，但不是必要条件。</p></li></ol><h4 id="四、事务的隔离级别"><a href="#四、事务的隔离级别" class="headerlink" title="四、事务的隔离级别"></a>四、事务的隔离级别</h4><ol><li><p><strong>读未提交（READ UNCOMMITTED）</strong></p><p>一个事务可以读取到另一个事务没有提交的数据。无法避免任何一种情况。</p></li><li><p><strong>读提交（READ COMMITTED）</strong></p><p>一个事务只能读取已经提交的事务所做的修改。换句话说，一个事务所做的修改在提交之前对其它事务是不可见的。可以解决脏读。</p></li><li><p><strong>可重复读（REPEATABLE READ）</strong></p><p>保证在同一个事务中多次读取同一数据的结果是一样的。可以解决不可重复读。</p></li><li><p><strong>序列化（SERIALIZABLE）</strong></p><p>强制事务串行执行，这样多个事务互不干扰，不会出现并发一致性问题。</p><p>该隔离级别需要加锁实现，因为要使用加锁机制保证同一时间只有一个事务执行，也就是保证事务串行执行。</p></li></ol><h4 id="五、多版本并发控制"><a href="#五、多版本并发控制" class="headerlink" title="五、多版本并发控制"></a>五、多版本并发控制</h4><h4 id="六、关系数据库设计理论"><a href="#六、关系数据库设计理论" class="headerlink" title="六、关系数据库设计理论"></a>六、关系数据库设计理论</h4><p><strong>数据库三大范式：</strong></p><ul><li><strong>属性不可分</strong>：每一列属性都是不可再分的属性值，确保每一列的原子性，两列属性相近或一样，尽量合并属性一样的列，确保不产生冗余数据。</li><li>每一行的数据只能与其中一列相关，一行数据只做一件事。只要数据列中出现数据重复，就要把表拆分开来。</li><li>数据不能存在传递关系，每个属性都与主键有直接关系而不是间接关系。</li></ul><h4 id="七、常见问题"><a href="#七、常见问题" class="headerlink" title="七、常见问题"></a>七、常见问题</h4><ol><li><p><strong>数据库索引用过哪些，什么情况失效？</strong></p><p>主键索引（聚簇索引）、普通索引、唯一索引、全文索引</p><p>where 语句中使用or，但是没有把or中的所有字段都加上索引，索引失效。</p></li></ol><p>　　where 语句使用&lt;&gt;和!=</p><p>　　like查询以“%…”开头</p><p>　　如果mysql估计全表扫描更快的话</p><ol start="2"><li><p><strong>LIMIT M, N</strong> </p><p>LIMIT 给定两个参数，第一个参数指定第一个返回记录行的偏移量，第二个参数指定返回记录行的最大数目（初始记录行的偏移量是 0而不是 1)。</p><p>LIMIT M 等价于LIMIT 0, M</p></li><li><p><strong>drop和delete的区别</strong></p><p>delete 删除的是 <strong>数据，</strong>drop语句删除表结构及所有数据，并将表所占用的空间全部释放</p></li></ol><p>　　delete会触发触发器，drop不会触发触发器；</p><ol start="4"><li><p><strong>数据库事务的应用场景</strong></p><p>在执行一系列数据库操作时，要保证这些操作必须完全正确执行，否则就不执行，在这种情况下，适合使用事务，例如将一些数据插入到两个相关联的表中，而且不能只有一张表插入成功，这种情况下，使用事务，无论是否插入成功，都不会对数据库造成不好的影响。</p></li><li><p><strong>数据库索引的创建原则</strong></p><p>表的主键、外键必须有索引;</p><p>经常查询的数据列最好建立索引</p><p>对于需要在指定范围内的快速或频繁查询的数据列;</p><p>经常用在WHERE子句中的数据列。</p><p>经常出现在关键字order by、group by、distinct后面的字段，建立索引。如果建立的是复合索引，索引的字段顺序要和这些关键字后面的字段顺序一致，否则索引不会被使用。</p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h4 id=&quot;一、事务&quot;&gt;&lt;a href=&quot;#一、事务&quot; class=&quot;headerlink&quot; title=&quot;一、事务&quot;&gt;&lt;/a&gt;一、事务&lt;/h4&gt;&lt;p&gt;事务指的是满足ACID的一组操作，它可以通过Commit提交一个事务，也可以使用Rollback进行回滚。&lt;/p&gt;
-&lt;ol&gt;</summary>
-      
-    
-    
-    
-    <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
   </entry>
