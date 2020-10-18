@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2020/08/12/Java%E6%B3%A8%E8%A7%A3/</loc>
+    <lastmod>2020-10-18</lastmod>
+  </url>
+  <url>
     <loc>http://yoursite.com/2020/10/10/LeetCode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-10-18</lastmod>
   </url>
@@ -19,10 +23,6 @@
   <url>
     <loc>http://yoursite.com/2020/09/24/Spring%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/</loc>
     <lastmod>2020-09-24</lastmod>
-  </url>
-  <url>
-    <loc>http://yoursite.com/2020/09/22/Leetcode%E6%AF%8F%E6%97%A5%E5%88%B7%E9%A2%98/</loc>
-    <lastmod>2020-09-22</lastmod>
   </url>
   <url>
     <loc>http://yoursite.com/2020/09/21/%E5%BF%AB%E9%80%9F%E5%B9%82%E7%AE%97%E6%B3%95/</loc>
@@ -99,9 +99,5 @@
   <url>
     <loc>http://yoursite.com/2020/08/15/2021%E7%BE%8E%E5%9B%A2%E6%AD%A3%E5%BC%8F%E6%89%B9%E7%AC%94%E8%AF%958.15/</loc>
     <lastmod>2020-08-15</lastmod>
-  </url>
-  <url>
-    <loc>http://yoursite.com/2020/08/12/Java%E6%B3%A8%E8%A7%A3/</loc>
-    <lastmod>2020-08-13</lastmod>
   </url>
 </urlset> 
